@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from '../core/core.module';
 import { AppComponent } from './app';
+import { AdaptiveLayoutStrategy, LayoutStrategy } from '../core';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,12 @@ import { AppComponent } from './app';
     BrowserModule,
     CoreModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LayoutStrategy,
+      useClass: AdaptiveLayoutStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

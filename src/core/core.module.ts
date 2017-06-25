@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { MdSidenavModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
-import { NavComponent } from './components/nav/nav';
-import { LayoutComponent } from './components/layout/layout';
+import { LayoutComponent, LayoutStrategy } from './components/layout';
+import { ResizeService } from './services';
 
 @NgModule({
   declarations: [
-    NavComponent,
     LayoutComponent
   ],
   imports: [
@@ -15,8 +14,11 @@ import { LayoutComponent } from './components/layout/layout';
     MdIconModule
   ],
   exports: [
-    NavComponent,
     LayoutComponent
+  ],
+  providers: [
+    LayoutStrategy,
+    ResizeService
   ]
 })
 export class CoreModule {
