@@ -1,0 +1,40 @@
+.kp-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 16px 0 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+}
+
+.kp-sidenav-container {
+  min-height: 100%;
+  height: auto!important;
+  max-width: 100%;
+  margin: 0;
+  -webkit-transform: none;
+  transform: none;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow: hidden;
+}
+
+.kp-sidenav {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  min-width: 260px;
+  background-color: #fafafa;
+  box-shadow: 6px 0 6px rgba(0,0,0,.1);
+  height: calc(100vh - 64px);
+}
+
+.kp-sidenav-content {
+  min-height: 100vh;
+  padding: 80px 3rem 1rem;
+}

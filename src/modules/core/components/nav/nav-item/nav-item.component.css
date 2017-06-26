@@ -1,0 +1,218 @@
+/************************************
+             Media queries
+ To use these, put this snippet in the approriate selector:
+     @include bp(tiny) {
+         background-color: purple;
+     }
+     Replace "tiny" with "medium" or "big" as necessary.
+*************************************/
+.starting.mat-sidenav-transition .mat-sidenav,
+.starting.mat-sidenav-transition .mat-sidenav-content,
+.starting.mat-sidenav-transition .mat-sidenav-backdrop.mat-sidenav-shown {
+  transition: none;
+}
+
+aio-nav-menu {
+  display: block;
+  margin: 0 auto;
+  font-size: 13px;
+}
+aio-nav-menu ul, aio-nav-menu a {
+  padding: 0;
+  margin: 0;
+}
+aio-nav-menu:first-child {
+  margin-top: 16px;
+}
+aio-nav-menu aio-nav-item div a {
+  padding-left: 16px;
+}
+
+md-sidenav.mat-sidenav.sidenav {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  min-width: 260px;
+  background-color: #FAFAFA;
+  box-shadow: 6px 0 6px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 64px);
+}
+md-sidenav.mat-sidenav.sidenav.collapsed {
+  top: 56px;
+}
+
+md-sidenav-container.sidenav-container {
+  min-height: 100%;
+  height: auto !important;
+  max-width: 100%;
+  margin: 0;
+  transform: none;
+}
+md-sidenav-container.sidenav-container.has-floating-toc {
+  max-width: 82%;
+}
+
+md-sidenav-container div.mat-sidenav-content {
+  height: auto;
+}
+
+.vertical-menu-item {
+  box-sizing: border-box;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  max-width: 260px;
+  overflow-wrap: break-word;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  text-decoration: none;
+  text-align: left;
+  transition-duration: 180ms;
+  transition-property: background-color, color;
+  transition-timing-function: ease-in-out;
+  width: 100%;
+  word-wrap: break-word;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.vertical-menu-item:hover {
+  text-shadow: 0 0 5px #ffffff;
+  color: #1976D2;
+}
+.vertical-menu-item .mat-icon {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  margin: 4px;
+}
+
+.vertical-menu-item.selected {
+  color: #1976D2;
+}
+
+button.vertical-menu-item {
+  border: none;
+  background-color: transparent;
+  padding: 8px 0 8px 20px;
+}
+button.vertical-menu-item:focus {
+  color: #0A1014;
+}
+
+.heading {
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.heading-children.expanded {
+  visibility: visible;
+  opacity: 1;
+  max-height: 4000px;
+  transition: visibility 500ms, opacity 500ms, max-height 500ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.heading-children.collapsed {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 1px;
+  transition: visibility 275ms, opacity 275ms, max-height 280ms;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.level-1 {
+  font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 20px;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+
+.level-2 {
+  font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  color: #6e6e6e;
+  font-weight: 400;
+  padding-left: 20px;
+  text-transform: none;
+}
+
+.level-3 {
+  font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  color: #6e6e6e;
+  padding-left: 20px;
+}
+
+.level-4 {
+  font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  color: #6e6e6e;
+  padding-left: 20px;
+}
+
+.level-1.expanded .mat-icon, .level-2.expanded .mat-icon {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: transform 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.level-1:not(.expanded) .mat-icon, .level-2:not(.expanded) .mat-icon {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: transform 150ms;
+  transition-timing-function: ease-in-out;
+  margin: 4px;
+}
+
+.promo-img-container img {
+  max-width: 90%;
+}
+@media (min-width: 650px) {
+  .promo-img-container img {
+    max-width: 100%;
+  }
+}
+
+aio-nav-menu.top-menu {
+  padding: 24px 0 0;
+}
+aio-nav-menu.top-menu aio-nav-item:last-child div {
+  border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+}
+aio-nav-menu.top-menu aio-nav-item:first-child div {
+  border-top: 1px solid rgba(110, 110, 110, 0.5);
+}
+
+md-sidenav .doc-version {
+  padding: 8px;
+  border-top: 1px solid #DBDBDB;
+}
+md-sidenav .doc-version select {
+  outline: none;
+  width: 100%;
+  background: rgba(219, 219, 219, 0.5);
+  height: 32px;
+  border: 1px solid #DBDBDB;
+  color: #333;
+}
+md-sidenav .doc-version select option {
+  font-family: "Roboto", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+}

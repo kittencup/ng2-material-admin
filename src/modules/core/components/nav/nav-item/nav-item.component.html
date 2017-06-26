@@ -1,0 +1,42 @@
+<div *ngIf="!node.children">
+  <a
+    [routerLink]="node.url"
+    class="vertical-menu-item"
+    [ngClass]="classes">
+    {{node.title}}
+  </a>
+</div>
+
+<div *ngIf="node.children">
+  <a *ngIf="node.url"
+     [routerLink]="node.url"
+     class="vertical-menu-item heading"
+     [ngClass]="classes"
+     (click)="headerClicked()"
+  >
+    {{node.title}}
+    <md-icon class="rotating-icon">keyboard_arrow_right</md-icon>
+  </a>
+
+  <button
+    *ngIf="!node.url" type="button"
+    class="vertical-menu-item heading"
+    [ngClass]="classes"
+    (click)="headerClicked()"
+  >
+    {{node.title}}
+    <md-icon class="rotating-icon">keyboard_arrow_right</md-icon>
+  </button>
+
+  <div
+    class="heading-children"
+    [ngClass]="classes"
+  >
+    <kp-nav-item
+      *ngFor="let node of node.children"
+      [node]="node"
+      [level]="level + 1"
+      [currentUrl]="currentUrl"
+    ></kp-nav-item>
+  </div>
+</div>

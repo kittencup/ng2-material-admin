@@ -1,0 +1,17 @@
+<md-toolbar color="primary" class="kp-toolbar">
+  <md-icon (click)="sidenav.toggle()">menu</md-icon>
+</md-toolbar>
+
+<md-sidenav-container class="kp-sidenav-container">
+  <md-sidenav #sidenav [mode]="mode" [opened]="opened" class="kp-sidenav">
+    <kp-nav-menu>
+
+    </kp-nav-menu>
+  </md-sidenav>
+
+  <div style="height: 2000px;background: red">
+    <section class="kp-sidenav-content">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</md-sidenav-container>

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { CoreModule } from '../core/core.module';
 import { AppComponent } from './app';
-import { AdaptiveLayoutStrategy, LayoutStrategy } from '../core';
+import { AdaptiveLayoutStrategy, LayoutStrategy, CoreModule } from '../modules/core';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,11 @@ import { AdaptiveLayoutStrategy, LayoutStrategy } from '../core';
   ],
   imports: [
     BrowserModule,
-    CoreModule
+    CoreModule,
+    RouterModule.forRoot([{
+      path: 'point',
+      loadChildren: 'modules/point/module#PointModule'
+    }])
   ],
   providers: [
     {
@@ -18,7 +22,9 @@ import { AdaptiveLayoutStrategy, LayoutStrategy } from '../core';
       useClass: AdaptiveLayoutStrategy
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 }

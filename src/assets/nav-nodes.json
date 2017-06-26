@@ -1,0 +1,37 @@
+[
+  {
+    "title": "积分",
+    "children": [
+      {
+        "title": "积分1",
+        "children": [
+          {
+            "title": "积分列表1",
+            "children": [
+              {
+                "title": "积分列表2",
+                "url": "/point/point-list"
+              }
+            ]
+          },
+          {
+            "title": "用户积分",
+            "path": "/point/point-user"
+          }
+        ]
+      },
+      {
+        "title": "用户积分",
+        "path": "/point/point-user"
+      },
+      {
+        "title": "积分订单",
+        "path": "/point/point-order"
+      },
+      {
+        "title": "积分虚拟物品",
+        "path": "/point/point-virtual-goods"
+      }
+    ]
+  }
+]
